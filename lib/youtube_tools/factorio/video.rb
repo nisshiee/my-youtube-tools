@@ -18,6 +18,7 @@ class YoutubeTools::Factorio::Video
   end
 
   def update_description(description)
+    return if @api_dao.snippet.description == description
     @api_dao.snippet.description = description
     YoutubeTools.svc.update_video('snippet', @api_dao)
   end
