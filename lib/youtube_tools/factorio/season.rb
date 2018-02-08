@@ -41,11 +41,11 @@ class YoutubeTools::Factorio::Season
     playlist_url: 'https://www.youtube.com/playlist?list=PLKeRpiqlb0qpI9mu5KisNQLkrSxnCPtbQ',
   )
   SEASON_3 = new(
-    name: 'ITエンジニアと遊ぶFactorio Season3', order: 3,
+    name: 'ITエンジニアと遊ぶFactorioマルチプレイ Season3', order: 3,
     playlist_url: 'https://www.youtube.com/playlist?list=PLKeRpiqlb0qqos2pdYTxiF9Ld7NYHE6tX',
   )
-  SEASON_EX1 = new(
-    name: 'ITエンジニアと遊ぶFactorio 番外編', order: 4,
+  SEASON_4 = new(
+    name: 'ITエンジニアと遊ぶFactorioマルチプレイ Season4', order: 4,
     playlist_url: 'https://www.youtube.com/playlist?list=PLKeRpiqlb0qpCkQGRdN3gLio2x6-YSbkv',
   )
 
@@ -54,7 +54,7 @@ class YoutubeTools::Factorio::Season
       SEASON_1,
       SEASON_2,
       SEASON_3,
-      SEASON_EX1,
+      SEASON_4,
     ]
   end
 
@@ -64,10 +64,10 @@ class YoutubeTools::Factorio::Season
       SEASON_1
     when /\AFactorio業務日報 Season2 \d{4}-\d{2}-\d{2}/
       SEASON_2
-    when /\AITエンジニアと遊ぶFactorio Season3 \d{4}-\d{2}-\d{2}/
+    when /\AITエンジニアと遊ぶFactorioマルチプレイ Season3 \d{4}-\d{2}-\d{2}/
       SEASON_3
-    when /\AITエンジニアと遊ぶFactorio 番外編 \d{4}-\d{2}-\d{2}/
-      SEASON_EX1
+    when /\AITエンジニアと遊ぶFactorioマルチプレイ Season4 \d{4}-\d{2}-\d{2}/
+      SEASON_4
     end
   end
 end
