@@ -21,8 +21,8 @@ class YoutubeTools::Factorio::Season
       other_lists = other_lists.join("\n")
 
       <<~DESC
-        #{name}
-        再生リスト: #{playlist_url}
+        #{name}: #{playlist_url}
+        お寿司: https://osushi.love/nisshieeorg
 
         Factorio: https://www.factorio.com/
 
@@ -48,6 +48,10 @@ class YoutubeTools::Factorio::Season
     name: 'ITエンジニアと遊ぶFactorioマルチプレイ Season4', order: 4,
     playlist_url: 'https://www.youtube.com/playlist?list=PLKeRpiqlb0qpCkQGRdN3gLio2x6-YSbkv',
   )
+  DEV_MOD_1 = new(
+    name: 'ITエンジニアと遊ぶFactorio mod開発', order: 5,
+    playlist_url: 'https://www.youtube.com/playlist?list=PLKeRpiqlb0qqDBVHhZhIey2mpO05LMevO',
+  )
 
   def self.all
     [
@@ -55,6 +59,7 @@ class YoutubeTools::Factorio::Season
       SEASON_2,
       SEASON_3,
       SEASON_4,
+      DEV_MOD_1,
     ]
   end
 
@@ -68,6 +73,8 @@ class YoutubeTools::Factorio::Season
       SEASON_3
     when /\AITエンジニアと遊ぶFactorioマルチプレイ Season4 \d{4}-\d{2}-\d{2}/
       SEASON_4
+    when /\AITエンジニアと遊ぶFactorio mod開発 \d{4}-\d{2}-\d{2}/
+      DEV_MOD_1
     end
   end
 end
