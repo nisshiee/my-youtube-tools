@@ -4,4 +4,10 @@ namespace :factorio do
     require_relative '../lib/youtube_tools/factorio/description_updator'
     YoutubeTools::Factorio::DescriptionUpdator.new.run
   end
+
+  desc '話題提供botを起動します'
+  task :interviewer do
+    require_relative '../lib/youtube_tools/discord/interviewer'
+    YoutubeTools::Discord::Interviewer.start
+  end
 end
